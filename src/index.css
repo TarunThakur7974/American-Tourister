@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Merriweather&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic&family=Open+Sans:wght@300&family=Rajdhani:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative&family=Tilt+Neon&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Merriweather&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative&family=Tilt+Neon&family=Ubuntu:wght@300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Navbar Css */
+.h5Top {
+  text-align: center;
+  background: linear-gradient(90deg, #d11e47, #ef7922);
+  color: #fff;
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Section One */
+.slider {
+  background-color: rgba(65, 61, 61, 0.497);
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  bottom: 58px;
+}
+
+.hoverImg {
+  position: relative;
+  object-fit: fill;
+  border-radius: 5px;
+  width: 100px;
+  opacity: 0.7;
+  border: 1px solid transparent;
+}
+
+.hoverImg:hover {
+  transition: border 0.2s, transform 0.2s, opacity 0.2s;
+  cursor: pointer;
+  border: 1px solid white;
+  opacity: 1;
+  transform: scale(1.2) translateY(-6px);
+  ;
+}
+
+/* Section Second */
+
+.underlineDiv {
+  width: 60px;
+  height: 10px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #d11e47, #ef7922);
+}
+
+.btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  color: #272727;
+  background-color: #ffffff;
+  border-color: #272727;
+  box-shadow: 0 2px 7px -2px #333;
+  transition: 0.5s ease-in-out;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #272727;
+}
+
+.sliderTwo::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  display: none;
+}
+
+.sliderTwo {
+  transition: scroll 0.5s;
+  scroll-behavior: smooth;
+}
+
+.heart {
+  padding: 5px;
+  box-shadow: 1px 2px 4px 1px rgba(40, 10, 10, 0.282);
+  border-radius: 100%;
+  z-index: 1;
+}
+
+/* clipPath css for cutting the images */
+.clip-path {
+  clip-path: polygon(0% 15%, 0 0, 15% 0%, 100% 0, 100% 21%, 93% 21%, 93% 78%, 100% 78%, 100% 100%, 15% 100%, 0 100%, 0% 85%);
+}
+
+@media screen and (max-width: 768px) {
+  .clip-path {
+    clip-path: none;
+  }
+}
+
+/* gradientBox css */
+
+.gradientBox {
+  display: flex;
+  justify-content: space-evenly;
+  clip-path: polygon(0 0, 1520px 100px, 1520px 532px, 0 450px);
+  background: linear-gradient(90deg, #d11e47, #ef7922);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.box>img:hover {
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.1);
+}
