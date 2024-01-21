@@ -35,7 +35,7 @@ html {
 }
 
 /* Section One */
-.slider {
+.sliderOne {
   background-color: rgba(65, 61, 61, 0.497);
   padding: 10px 0px 5px 0px;
   display: flex;
@@ -147,7 +147,7 @@ html {
 .upClass {
   z-index: 10;
   transition: all 1.1s ease-in-out;
-  transform: translateY(-50px);
+  transform: translateY(-40px);
 }
 
 .upClass img {
@@ -164,17 +164,32 @@ html {
   box-shadow: 1px 2px 4px 1px rgba(40, 10, 10, 0.559);
 }
 
-.rankGradient{
+.rankGradient {
   height: 150px;
-  bottom: 80px;
+  bottom: 40px;
   width: 60%;
   clip-path: polygon(0 0%, 100% 45px, 100% 100%, 0 85px);
-  background: linear-gradient(90deg,#d11e47,#ef7922);
+  background: linear-gradient(90deg, #d11e47, #ef7922);
 }
 
-.objDiv strong{
+.objDiv strong {
   color: white;
   text-shadow: 1px 2px 4px rgba(40, 10, 10, 0.559);
   padding: 0px 20px;
 
+}
+
+/* Slider Third */
+.moveBtn {
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 1px 2px 4px rgba(40, 10, 10, 0.559);
+  color: black;
+  background-color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.moveBtn::after {
+  content: none; /* or content: ''; */
 }

@@ -6,7 +6,7 @@ import fourthImage from '../assets/fourthImage.webp'
 import fifthImage from '../assets/fifthImage.webp'
 import sixthImage from '../assets/sixthImage.webp'
 
-const SliderOne = () => {
+const SliderFirst = () => {
     const [img, setImg] = useState(ViratBhai)
     const [i, setI] = useState(0)
     const [arr] = useState([ViratBhai, secondImage, thirdImage, fourthImage, fifthImage, sixthImage])
@@ -33,7 +33,7 @@ const SliderOne = () => {
         <>
             <section className='max-md:h-[80vh]'>
                 <img className='max-md:h-[92%] max-md:object-cover'  src={img} alt="" />
-                <div className="slider max-sm:gap-1 max-sm:p-px max-sm:bottom-8">
+                <div className="sliderOne max-sm:gap-1 max-sm:p-px max-sm:bottom-8">
                     {arr.map((image, index) => <img className='hoverImg max-lg:w-16 max-sm:w-[53px]' src={image} onClick={slideChange} key={index} alt={image} />)}
                 </div>
             </section>
@@ -41,5 +41,5 @@ const SliderOne = () => {
     )
 }
 
-export default SliderOne
+export default SliderFirst
 

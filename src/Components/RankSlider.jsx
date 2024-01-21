@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Pagination } from 'swiper/modules';
 import React, { useEffect, useRef, useState } from 'react'
 import one from '../assets/01Img.webp'
 import Two from '../assets/02Img.webp'
@@ -14,26 +13,7 @@ import Nine from '../assets/09Img.webp'
 import Ten from '../assets/10Img.webp'
 import Eleven from '../assets/11Img.webp'
 import Twelve from '../assets/12Img.webp'
-
-const ImageComponent = ({ obj, change }) => {
-    const divref = useRef(null)
-    const [check, setCheck] = useState(false)
-    useEffect(() => {
-        setCheck(divref.current.parentElement.className.includes('active'))
-    }, [obj, change])
-    return (
-        <>
-            <div ref={divref} className="relative flex flex-col gap-1 items-start cursor-pointer">
-                {check && <div className="absolute flex flex-col justify-around h-3/4 objDiv">
-                    <strong className='text-3xl max-md:text-xl'>{obj.rank}</strong>
-                    <strong className='text-2xl max-md:text-xl'>{obj.title}</strong>
-                </div>}
-                <img className='' src={obj.image} />
-                {check && <a href="https://www.americantourister.in/discover" className='text-lg max-md:text-sm abtn' target='_blank'>More</a>}
-            </div>
-        </>
-    )
-}
+import ImageComponent from './SmallComponents/ImageComponent';
 
 
 const RankSlider = () => {
@@ -71,13 +51,11 @@ const RankSlider = () => {
         <>
             <div className="relative">
                 <div className="rankGradient absolute"></div>
-                <Swiper style={{ overflow: 'hidden', margin: "40px 0px", padding: "55px 0px" }}
+                <Swiper style={{ marginTop: "40px", padding: "55px" }}
                     centeredSlides={true}
-                    grabCursor={true}
                     spaceBetween={20}
                     slidesPerView={slidesPerView}
                     loop={true}
-                    modules={[Pagination]}
                     onSlideChange={() => {
                         setTimeout(() => {
                             imgRefs.forEach((item) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import SliderOne from './Components/SliderOne'
+import SliderFirst from './Components/SliderFirst'
 import SliderSecond from './Components/SliderSecond'
 import imageFirst from "./assets/FirstBoxImg.webp"
 import imageSecond from "./assets/SecondBoxImg.webp"
@@ -8,6 +8,7 @@ import imageThird from "./assets/ThirdBoxImg.png"
 import Box from './Components/Box'
 import GradientBox from './Components/GradientBox'
 import RankSlider from './Components/RankSlider'
+import SliderThird from './Components/SliderThird'
 
 
 const App = () => {
@@ -17,13 +18,14 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <SliderOne />
+      <SliderFirst />
       <SliderSecond />
       <Box image={imageFirst} text={firstText} heading={"Best Sellers"} btntext={"Shop Now"} />
       <Box image={imageSecond} text={secondText} heading={"New Arrivals"} btntext={"Shop Now"} />
       <GradientBox />
       <Box image={imageThird} text={thirdText} heading={"Here For You"} btntext={"Let Us Help"} />
       <RankSlider />
+      <SliderThird />
       <div className="h-screen"></div>
     </>
   )
