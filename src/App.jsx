@@ -7,6 +7,7 @@ import imageSecond from "./assets/SecondBoxImg.webp"
 import imageThird from "./assets/ThirdBoxImg.png"
 import Box from './Components/Box'
 import GradientBox from './Components/GradientBox'
+import RankSlider from './Components/RankSlider'
 
 
 const App = () => {
@@ -16,12 +17,13 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <SliderOne/>
-      <SliderSecond/>
-      <Box image={imageFirst} text={firstText} heading={"Best Sellers"} btntext={"Shop Now"}/>
-      <Box image={imageSecond} text={secondText} heading={"New Arrivals"} btntext={"Shop Now"}/>
-      <GradientBox/>
-      <Box image={imageThird} text={thirdText} heading={"Here For You"} btntext={"Let Us Help"}/>
+      <SliderOne />
+      <SliderSecond />
+      <Box image={imageFirst} text={firstText} heading={"Best Sellers"} btntext={"Shop Now"} />
+      <Box image={imageSecond} text={secondText} heading={"New Arrivals"} btntext={"Shop Now"} />
+      <GradientBox />
+      <Box image={imageThird} text={thirdText} heading={"Here For You"} btntext={"Let Us Help"} />
+      <RankSlider />
       <div className="h-screen"></div>
     </>
   )

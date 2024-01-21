@@ -64,7 +64,6 @@ html {
 }
 
 /* Section Second */
-
 .underlineDiv {
   width: 60px;
   height: 10px;
@@ -104,6 +103,13 @@ html {
   z-index: 1;
 }
 
+.cartButton:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  box-shadow: 1px 2px 4px 1px rgba(40, 10, 10, 0.484);
+}
+
 /* clipPath css for cutting the images */
 .clip-path {
   clip-path: polygon(0% 15%, 0 0, 15% 0%, 100% 0, 100% 21%, 93% 21%, 93% 78%, 100% 78%, 100% 100%, 15% 100%, 0 100%, 0% 85%);
@@ -134,4 +140,41 @@ html {
   transition: transform 0.5s ease-in-out;
   cursor: pointer;
   transform: scale(1.1);
+}
+
+/* swiper first  */
+
+.upClass {
+  z-index: 10;
+  transition: all 1.1s ease-in-out;
+  transform: translateY(-50px);
+}
+
+.upClass img {
+  box-shadow: 1px 2px 4px 1px rgba(40, 10, 10, 0.559);
+}
+
+.abtn {
+  background-color: #ffffff;
+  color: black;
+  padding: 5px 25px;
+  border-radius: 20px;
+  margin-left: 15px;
+  font-weight: 600;
+  box-shadow: 1px 2px 4px 1px rgba(40, 10, 10, 0.559);
+}
+
+.rankGradient{
+  height: 150px;
+  bottom: 80px;
+  width: 60%;
+  clip-path: polygon(0 0%, 100% 45px, 100% 100%, 0 85px);
+  background: linear-gradient(90deg,#d11e47,#ef7922);
+}
+
+.objDiv strong{
+  color: white;
+  text-shadow: 1px 2px 4px rgba(40, 10, 10, 0.559);
+  padding: 0px 20px;
+
 }
