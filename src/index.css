@@ -286,17 +286,16 @@ html {
 
 /* scroll */
 #scrollToTopBtn {
-  padding: 5px;
   position: fixed;
-  font-size: 30px;
-  bottom: 45px;
+  font-size: 25px;
+  bottom: 30px;
   right: 22px;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   background-color: white;
   border-radius: 100%;
   border: 4px solid rgba(128, 128, 128, 0.648);
   color: black;
-  z-index: 100;
+  z-index: 20;
   cursor: pointer;
 }

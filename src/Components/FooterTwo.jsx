@@ -66,7 +66,7 @@ const WhiteFooter = () => {
     return (
         <>
             <div className="whiteFooterOne">
-                <ul className='w-[60%] ml-3 flex  flex-col gap-3 mt-5'>
+                <ul className='w-[60%] ml-3 flex  flex-col gap-3 mt-5 max-sm:w-[90%]'>
                     <hr className='hr' />
                     <li><p>Support</p> <p>+</p></li>
                     <hr className='hr' />
@@ -77,7 +77,7 @@ const WhiteFooter = () => {
                     <li><p>ACCOUNT</p><p>+</p></li>
                 </ul>
             </div>
-            <div className="flex justify-between mt-20 mb-2 w-[70%]">
+            <div className="flex justify-between mt-20 mb-2 w-[70%] max-sm:w-[90%]">
                 <img className='AmericanFotterTwo' src={AmericanLogo} />
                 <div className='flex gap-8'>
                     <FaSquareFacebook className='text-[#b9b7b7] text-2xl' />
@@ -87,7 +87,7 @@ const WhiteFooter = () => {
             </div>
             <div className="flex justify-between mt-10">
                 <div className="">
-                    <ul className='text-[#1c1a1ab9] flex text-xs gap-8 flex-wrap w-[80%]'>
+                    <ul className='text-[#1c1a1ab9] flex text-xs gap-8 flex-wrap w-[80%] m-auto'>
                         <li>Terms & Condition</li>
                         <li>Privacy</li>
                         <li>Personal Information Collection Statement</li>
