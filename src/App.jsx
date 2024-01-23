@@ -13,7 +13,8 @@ import GradientBoxTwo from './Components/GradientBoxTwo'
 import ImageContainer from './Components/ImageContainer'
 import GradientThird from './Components/GradientThird'
 import FooterOne from './Components/FooterOne'
-import FotterTwo from './Components/FotterTwo'
+import FooterTwo from './Components/FooterTwo'
+import ScrollButton from './Components/SmallComponents/ScrollButton'
 
 
 const App = () => {
@@ -35,8 +36,8 @@ const App = () => {
       <ImageContainer />
       <GradientThird />
       <FooterOne />
-      <FotterTwo />
-      <div className="h-screen"></div>
+      <FooterTwo />
+      <ScrollButton />
     </>
   )
 }

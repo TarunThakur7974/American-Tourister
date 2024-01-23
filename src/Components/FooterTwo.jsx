@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSquareFacebook } from "react-icons/fa6";
 import AmericanLogo from '../assets/HeadPhoto.png'
 import { IoLogoYoutube } from 'react-icons/io';
 import { ImInstagram } from "react-icons/im";
 import master from '../assets/master.png'
 import visa from '../assets/visa.png'
-const BlackFotter = () => {
+const BlackFooter = () => {
     return (
         <div className='bg-[#272727] py-20'>
             <div className="flex flex-col w-[90%] m-auto">
@@ -62,17 +62,64 @@ const BlackFotter = () => {
     )
 }
 
-const WhiteFotter = () => {
+const WhiteFooter = () => {
     return (
         <>
+            <div className="whiteFooterOne">
+                <ul className='w-[60%] ml-3 flex  flex-col gap-3 mt-5'>
+                    <hr className='hr' />
+                    <li><p>Support</p> <p>+</p></li>
+                    <hr className='hr' />
+                    <li><p>QUICK LINKS</p> <p>+</p></li>
+                    <hr className='hr' />
+                    <li><p>OUR COMPANY</p> <p>+</p></li>
+                    <hr className='hr' />
+                    <li><p>ACCOUNT</p><p>+</p></li>
+                </ul>
+            </div>
+            <div className="flex justify-between mt-20 mb-2 w-[70%]">
+                <img className='AmericanFotterTwo' src={AmericanLogo} />
+                <div className='flex gap-8'>
+                    <FaSquareFacebook className='text-[#b9b7b7] text-2xl' />
+                    <IoLogoYoutube className='text-[#b9b7b7] text-2xl' />
+                    <ImInstagram className='text-[#b9b7b7] text-2xl' />
+                </div>
+            </div>
+            <div className="flex justify-between mt-10">
+                <div className="">
+                    <ul className='text-[#1c1a1ab9] flex text-xs gap-8 flex-wrap w-[80%]'>
+                        <li>Terms & Condition</li>
+                        <li>Privacy</li>
+                        <li>Personal Information Collection Statement</li>
+                        <li><span className='flex'><img className='h-[30px]' src={master} alt="" /> <img className='h-[30px]' src={visa} alt="" /></span></li>
+                    </ul>
+                    <p className='text-[#1c1a1ab9] text-sm my-8 max-sm:text-xs'> Copyright © 2024 Developed and managed by Quadrant</p>
+                </div>
+            </div>
+
         </>
     )
 }
 
-const FotterTwo = () => {
+const FooterTwo = () => {
+    const [check, setcheck] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 850) {
+                setcheck(true);
+            } else {
+                setcheck(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
-        <BlackFotter />
-    )
+        check ? <WhiteFooter /> : <BlackFooter />
+    );
 }
 
-export default FotterTwo
+export default FooterTwo
