@@ -22,6 +22,15 @@ import 'swiper/css/navigation';
 
 import { Autoplay, Navigation } from 'swiper/modules';
 
+const ImageComponent = ({ image }) => {
+    return (
+        <div className="thirdSlideImg rounded-2xl cursor-pointer">
+            <img className='rounded-2xl w-full' src={image} alt="Your Image" />
+            <div className="thirdSlideText "> <p className='text-sm'>amtouristeirn</p></div>
+        </div>
+    )
+}
+
 
 const SliderThird = () => {
 
@@ -76,11 +85,11 @@ const SliderThird = () => {
                         }
 
                         modules={[Autoplay, Navigation]}
-                        className="mySwiper w-4/6 max-lg:w-3/4 max-md:w-5/6"
+                        className="mySwiper w-4/6 max-lg:w-3/4 max-md:w-5/6 my-10"
                     >
                         <div className="swiper-button-next moveBtn">&gt;</div>
                         <div className="swiper-button-prev moveBtn">&lt;</div>
-                        {arr.map((image, i) => <SwiperSlide key={i}><img className='rounded-2xl' src={image} /></SwiperSlide>)}
+                        {arr.map((image, i) => <SwiperSlide key={i}><ImageComponent image={image} /></SwiperSlide>)}
 
                     </Swiper>
                 </div>

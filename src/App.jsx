@@ -9,6 +9,11 @@ import Box from './Components/Box'
 import GradientBox from './Components/GradientBox'
 import RankSlider from './Components/RankSlider'
 import SliderThird from './Components/SliderThird'
+import GradientBoxTwo from './Components/GradientBoxTwo'
+import ImageContainer from './Components/ImageContainer'
+import GradientThird from './Components/GradientThird'
+import FooterOne from './Components/FooterOne'
+import FotterTwo from './Components/FotterTwo'
 
 
 const App = () => {
@@ -26,6 +31,11 @@ const App = () => {
       <Box image={imageThird} text={thirdText} heading={"Here For You"} btntext={"Let Us Help"} />
       <RankSlider />
       <SliderThird />
+      <GradientBoxTwo />
+      <ImageContainer />
+      <GradientThird />
+      <FooterOne />
+      <FotterTwo />
       <div className="h-screen"></div>
     </>
   )
