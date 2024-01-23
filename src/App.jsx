@@ -1,45 +1,26 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import SliderFirst from './Components/SliderFirst'
-import SliderSecond from './Components/SliderSecond'
-import imageFirst from "./assets/FirstBoxImg.webp"
-import imageSecond from "./assets/SecondBoxImg.webp"
-import imageThird from "./assets/ThirdBoxImg.png"
-import Box from './Components/Box'
-import GradientBox from './Components/GradientBox'
-import RankSlider from './Components/RankSlider'
-import SliderThird from './Components/SliderThird'
-import GradientBoxTwo from './Components/GradientBoxTwo'
-import ImageContainer from './Components/ImageContainer'
-import GradientThird from './Components/GradientThird'
-import FooterOne from './Components/FooterOne'
+import Home from './Components/Home'
+import LoginPage from './Components/LoginSign'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import FooterTwo from './Components/FooterTwo'
-import ScrollButton from './Components/SmallComponents/ScrollButton'
 
 
 const App = () => {
-  const firstText = "Shop American Tourister's best-sellers online. Discover the most popular, top-rated travel gear handpicked by American Tourister fans!"
-  const secondText = "Shop new carry-on luggage to backpacks. Freshen up your next trip with the latest in luggage and travel gear."
-  const thirdText = "Discover answers for our most frequently asked questions plus how to deal with any issue you might encounter."
+
   return (
     <>
-      <Navbar />
-      <SliderFirst />
-      <SliderSecond />
-      <Box image={imageFirst} text={firstText} heading={"Best Sellers"} btntext={"Shop Now"} />
-      <Box image={imageSecond} text={secondText} heading={"New Arrivals"} btntext={"Shop Now"} />
-      <GradientBox />
-      <Box image={imageThird} text={thirdText} heading={"Here For You"} btntext={"Let Us Help"} />
-      <RankSlider />
-      <SliderThird />
-      <GradientBoxTwo />
-      <ImageContainer />
-      <GradientThird />
-      <FooterOne />
-      <FooterTwo />
-      <ScrollButton />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signIn" element={<><LoginPage /> <FooterTwo /></>} />
+        </Routes>
+      </Router>
     </>
   )
 }
 
 export default App
+

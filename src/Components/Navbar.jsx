@@ -5,6 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <>
@@ -12,7 +13,7 @@ const Navbar = () => {
             <nav className='sticky top-0 bg-white z-10'>
                 <div className="flex justify-between w-11/12 py-4 m-auto">
                     <div className="navLeft flex">
-                        <img className='h-[38px] max-sm:h-[30px]' src={HeadPhoto} alt="" />
+                        <Link to='/'><img className='cursor-pointer h-[38px] max-sm:h-[30px]' src={HeadPhoto} alt="" /></Link>
                     </div>
                     <div className="navMiddle max-lg:hidden">
                         <ul className='flex gap-7'>
@@ -27,7 +28,7 @@ const Navbar = () => {
                     <div className="navRight">
                         <ul className='flex gap-6'>
                             <li className='text-2xl max-sm:text-xl'><IoLocationOutline /></li>
-                            <li className='text-2xl max-sm:text-xl'><AiOutlineUser /></li>
+                            <Link to="signIn"><li className='text-2xl max-sm:text-xl'><AiOutlineUser /></li></Link>
                             <li className='text-2xl max-sm:text-xl'><BsSearch /></li>
                             <li className='text-2xl max-sm:text-xl'><MdOutlineShoppingCart /></li>
                         </ul>

@@ -299,3 +299,41 @@ html {
   z-index: 20;
   cursor: pointer;
 }
+
+/* signIn Page */
+
+.btnLogin {
+  font-weight: 600;
+  border-radius: 50px;
+  color: #272727;
+  background-color: #ffffff;
+  border-color: #272727;
+  box-shadow: 0 2px 7px -2px #201f1f;
+  transition: 0.5s ease-in-out;
+}
+
+.btnLogin:hover {
+  color: #ffffff;
+  background-color: #272727;
+}
+
+.signForm input {
+  box-sizing: border-box;
+  color: white;
+  width: 90%;
+  padding: 8px 15px;  
+  border-radius: 20px;
+  background: linear-gradient(90deg, #d11e47, #ef7922);
+  outline: none;
+}
+
+.signForm input:focus {
+  border: 2px solid aqua;
+}
+
+.signForm input::placeholder {
+  color: white;
+  font-size: 13px;
+  font-weight: thin;
+
+}
