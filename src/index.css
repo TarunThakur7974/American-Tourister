@@ -288,10 +288,11 @@ html {
 #scrollToTopBtn {
   position: fixed;
   font-size: 25px;
-  bottom: 30px;
-  right: 22px;
-  height: 45px;
-  width: 45px;
+  bottom: 50px;
+  height: 50px;
+  right: 0;
+  margin-right:40px ;
+  width: 50px;
   background-color: white;
   border-radius: 100%;
   border: 4px solid rgba(128, 128, 128, 0.648);
@@ -321,7 +322,7 @@ html {
   box-sizing: border-box;
   color: white;
   width: 90%;
-  padding: 8px 15px;  
+  padding: 8px 15px;
   border-radius: 20px;
   background: linear-gradient(90deg, #d11e47, #ef7922);
   outline: none;
