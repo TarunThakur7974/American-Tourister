@@ -22,8 +22,8 @@ const Home = () => {
     const thirdText = "Discover answers for our most frequently asked questions plus how to deal with any issue you might encounter."
     return (
         <>
-            {/* <SliderFirst /> */}
-            {/* <SliderSecond />
+            <SliderFirst />
+            <SliderSecond />
             <Box image={imageFirst} text={firstText} heading={"Best Sellers"} btntext={"Shop Now"} />
             <Box image={imageSecond} text={secondText} heading={"New Arrivals"} btntext={"Shop Now"} />
             <GradientBox />
@@ -34,8 +34,8 @@ const Home = () => {
             <ImageContainer />
             <GradientThird />
             <FooterOne />
-            <FooterTwo />
-            <ScrollButton /> */}
+            {/* <FooterTwo /> */}
+            <ScrollButton />
         </>
     )
 }
