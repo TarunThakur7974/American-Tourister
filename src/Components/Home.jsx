@@ -31,9 +31,9 @@ const Home = () => {
             <RankSlider />
             <SliderThird />
             <GradientBoxTwo />
-            <ImageContainer />
-            <GradientThird />
-            <FooterOne />
+            {/* <ImageContainer />
+            <GradientThird /> */}
+            {/* <FooterOne /> */}
             {/* <FooterTwo /> */}
             <ScrollButton />
         </>
