@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <>
             {/* <SliderFirst /> */}
-            <SliderSecond />
+            {/* <SliderSecond />
             <Box image={imageFirst} text={firstText} heading={"Best Sellers"} btntext={"Shop Now"} />
             <Box image={imageSecond} text={secondText} heading={"New Arrivals"} btntext={"Shop Now"} />
             <GradientBox />
@@ -35,7 +35,7 @@ const Home = () => {
             <GradientThird />
             <FooterOne />
             <FooterTwo />
-            <ScrollButton />
+            <ScrollButton /> */}
         </>
     )
 }
