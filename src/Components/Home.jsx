@@ -33,8 +33,8 @@ const Home = () => {
             <GradientBoxTwo />
             <ImageContainer />
             <GradientThird />
-            {/* <FooterOne /> */}
-            {/* <FooterTwo /> */}
+            <FooterOne />
+            <FooterTwo />
             <ScrollButton />
         </>
     )

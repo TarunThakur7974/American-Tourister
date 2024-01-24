@@ -34,7 +34,7 @@ const SliderFirst = () => {
             <section className='max-md:h-[80vh]'>
                 <img className='max-md:h-[92%] max-md:object-cover'  src={img} alt="" />
                 <div className="sliderOne max-sm:gap-1 max-sm:p-px max-sm:bottom-8">
-                    {arr.map((image, index) => <img className='hoverImg max-lg:w-16 max-sm:w-[48px]' src={image} onClick={slideChange} key={index} alt={image} />)}
+                    {arr.map((image, index) => <img className='hoverImg max-lg:w-16 max-sm:w-[50px]' src={image} onClick={slideChange} key={index} alt={image} />)}
                 </div>
             </section>
         </>
