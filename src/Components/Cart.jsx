@@ -43,7 +43,7 @@ const Cart = () => {
     }
 
     return (
-        <div className="flex max-md:flex-col">
+        <div className="flex max-lg:flex-col">
             <div className="leftCart w-[65%] max-md:w-[90%] max-md:m-auto">
                 <div className="flex justify-between text-center bg-slate-100 text-xs font-bold p-3 m-2">
                     <p>ITEM(S)</p>
@@ -58,7 +58,7 @@ const Cart = () => {
                 </div>
                 <div className="  overflow-scroll cartScroll max-h-96">{CartArr.map((arr, i) => <CartCompo key={i} arr={arr} />)}</div>
             </div>
-            <div className="rigthCart w-[35%] py-8 max-md:w-[90%] max-md:m-auto ">
+            <div className="rigthCart w-[35%] py-8 max-lg:w-[98%] max-md:m-auto ">
                 <div className="w-[80%] m-auto flex gap-3 flex-col">
                     <div className="flex  justify-between text-[15px] font-semibold">
                         <p>MRP:</p>
@@ -79,14 +79,14 @@ const Cart = () => {
                     </div>
                     <hr />
                     <p className="text-xs text-gray-400 ">COUPON CODE</p>
-                    <div className="p-2 bg-slate-100 border-dotted rounded border-gray-500 border-2">
+                    <div className="p-2 bg-slate-100 border-dotted rounded border-gray-500 border-2 flex justify-evenly items-center">
                         <span className="p-1 bg-slate-400 text-white rounded-full">%</span>
                         <input
-                            className="ms-1 me-5 focus:outline-none bg-transparent text-xs max-[420px]:me-0"
+                            className="focus:outline-none bg-transparent text-xs"
                             type="text"
                             placeholder="Enter your coupon here"
                         />
-                        <button className="text-gray-300 border-2 rounded text-xs bg-white p-1 px-3 ms-5 max-[420px]:ms-0 ">
+                        <button className="text-gray-300 border-2 rounded text-xs bg-white p-1 px-2">
                             APPLY COUPOUN
                         </button>
                     </div>
