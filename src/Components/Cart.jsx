@@ -79,7 +79,7 @@ const Cart = () => {
                     </div>
                     <hr />
                     <p className="text-xs text-gray-400 ">COUPON CODE</p>
-                    <div className="p-2 bg-slate-100 border-dotted rounded border-gray-500 border-2 flex justify-evenly items-center">
+                    <div className="p-2 bg-slate-100 border-dotted rounded border-gray-500 border-2 flex justify-evenly items-center max-md:justify-center">
                         <span className="p-1 bg-slate-400 text-white rounded-full">%</span>
                         <input
                             className="focus:outline-none bg-transparent text-xs"
