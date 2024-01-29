@@ -1,75 +1,14 @@
 import React, { useRef, useState } from 'react'
 import Heading from './SmallComponents/Heading'
 import Buttons from './SmallComponents/Buttons'
-import One from '../assets/MostPopularOne.webp'
-import Two from '../assets/MostPopularTwo.webp'
-import Three from '../assets/MostPopularThree.webp'
-import Four from '../assets/MostPopularFour.webp'
-import Five from '../assets/MostPopularFive.webp'
-import Six from '../assets/MostPopularSix.webp'
 import BagCart from './SmallComponents/BagCart'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useSelector } from 'react-redux';
 const SliderSecond = () => {
+    const { MostPopular } = useSelector((state) => state.BagPacks)
     const slider = useRef(null);
     const [right, setRight] = useState(0);
-    const [Arr] = useState([
-        {
-            name: "FORNAX",
-            price: 8100,
-            oldPrice: 10800,
-            _id: 1,
-            image: One
-        },
-        {
-            name: "FORNAX",
-            price: 10100,
-            oldPrice: 12800,
-            _id: 2,
-            image: One
-        },
-        {
-            name: "FORNAX",
-            price: 6100,
-            oldPrice: 8800,
-            _id: 3,
-            image: One
-        },
-        {
-            name: "AMERICAN",
-            price: 7100,
-            oldPrice: 9800,
-            _id: 4,
-            image: Two
-        },
-        {
-            name: "PLAYBLUE",
-            price: 7500,
-            oldPrice: 9000,
-            _id: 5,
-            image: Three
-        },
-        {
-            name: "ROLLIO",
-            price: 8100,
-            oldPrice: 10800,
-            _id: 6,
-            image: Four
-        },
-        {
-            name: "ROLLIO",
-            price: 6100,
-            oldPrice: 4800,
-            _id: 7,
-            image: Five
-        },
-        {
-            name: "ROLLIO",
-            price: 4500,
-            oldPrice: 5900,
-            _id: 8,
-            image: Six
-        },
-    ])
+    const [Arr] = useState(MostPopular);
 
     const previous = () => {
         const div = slider.current;

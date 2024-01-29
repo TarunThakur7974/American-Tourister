@@ -25,6 +25,10 @@ html {
 
 
 /* Navbar Css */
+nav li {
+  cursor: pointer;
+}
+
 .h5Top {
   text-align: center;
   background: linear-gradient(90deg, #d11e47, #ef7922);
@@ -336,4 +340,34 @@ html {
   font-size: 13px;
   font-weight: thin;
 
+}
+
+/* hover div */
+.hoverDiv li:first-child {
+  font-weight: bold;
+}
+
+.hoverDiv li {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.hoverDiv {
+  position: absolute;
+  top: 67px;
+  left: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.hoverDiv {
+  position: absolute;
+  top: 67px;
+  left: 0px;
+}
+
+
+
+.cartScroll::-webkit-scrollbar{
+  display:none;
 }
