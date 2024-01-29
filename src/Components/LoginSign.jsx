@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const LoginSign = () => {
+    const Navigate = useNavigate();
     return (
         <div className='flex justify-evenly items-center h-[48vh] w-[70%] m-auto my-9 max-md:flex-col gap-4'>
             <div className="flex flex-col justify-center items-start w-full gap-4 px-3 border-r-2 max-md:border-r-0 max-md:border-b-2 pb-3">
@@ -15,7 +17,7 @@ const LoginSign = () => {
             </div>
             <div className="flex flex-col justify-center items-center gap-4 w-full ">
                 <h3 className='text-3xl font-bold max-md:text-center max-md:text-2xl text-gray-700'>New Customer?</h3>
-                <button className='text-lg px-20 font-bold btnLogin max-sm:text-lg my-1'>Sign up</button>
+                <button type='button' onClick={()=> Navigate('/signup') } className='text-lg px-20 font-bold btnLogin max-sm:text-lg my-1'>Sign up</button>
             </div>
         </div>
     )

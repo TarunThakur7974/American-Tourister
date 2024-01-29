@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import HoverBox from './HoverBox';
 const Navbar = () => {
-    const { LuggageArr, BackPacksArr, DuffelsArr, BrowseArr, DiscoverArr } = useSelector(state => state.BagPacks)
+    const { LuggageArr, BackPacksArr, DuffelsArr, BrowseArr, DiscoverArr,CartArr } = useSelector(state => state.BagPacks)
     const [showLuggage, setShowLuggage] = useState(null);
 
 
@@ -64,7 +64,7 @@ const Navbar = () => {
                             <li className='text-2xl max-sm:text-xl'><IoLocationOutline /></li>
                             <Link to="signIn"><li className='text-2xl max-sm:text-xl'><AiOutlineUser /></li></Link>
                             <li className='text-2xl max-sm:text-xl'><BsSearch /></li>
-                            <Link to="cart"> <li className='text-2xl max-sm:text-xl'><MdOutlineShoppingCart /></li></Link>
+                            <Link to="cart"><li className='text-2xl max-sm:text-xl'><span ><MdOutlineShoppingCart />{CartArr.length > 0 && <span className='text-xs icon'><i>{CartArr.length}</i></span>}</span></li></Link>
                         </ul>
                     </div>
                 </div>

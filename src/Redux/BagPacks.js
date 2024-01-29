@@ -6,6 +6,7 @@ import Three from '../assets/MostPopularThree.webp'
 import Four from '../assets/MostPopularFour.webp'
 import Five from '../assets/MostPopularFive.webp'
 import Six from '../assets/MostPopularSix.webp'
+import extraReducers from "./ExtraReducer";
 
 const BagPacks = createSlice({
     name: "BagPacks",
@@ -20,69 +21,73 @@ const BagPacks = createSlice({
                 name: "FORNAX",
                 price: 8100,
                 oldPrice: 10800,
-                _id: 1,
+                id: 1,
                 image: One
             },
             {
                 name: "FORNAX",
                 price: 10100,
                 oldPrice: 12800,
-                _id: 2,
+                id: 2,
                 image: One
             },
             {
                 name: "FORNAX",
                 price: 6100,
                 oldPrice: 8800,
-                _id: 3,
+                id: 3,
                 image: One
             },
             {
                 name: "AMERICAN",
                 price: 7100,
                 oldPrice: 9800,
-                _id: 4,
+                id: 4,
                 image: Two
             },
             {
                 name: "PLAYBLUE",
                 price: 7500,
                 oldPrice: 9000,
-                _id: 5,
+                id: 5,
                 image: Three
             },
             {
                 name: "ROLLIO",
                 price: 8100,
                 oldPrice: 10800,
-                _id: 6,
+                id: 6,
                 image: Four
             },
             {
                 name: "ROLLIO",
                 price: 6100,
                 oldPrice: 4800,
-                _id: 7,
+                id: 7,
                 image: Five
             },
             {
                 name: "ROLLIO",
                 price: 4500,
                 oldPrice: 5900,
-                _id: 8,
+                id: 8,
                 image: Six
             },
         ],
         CartArr: [],
         CheckArr: [],
-        TotalSum: null
+        TotalSum: null,
+        isLoading: false,
+        isError: false,
+        message: '',
+        User: null
     },
     reducers: {
         CartAdd: (state, action) => {
             return {
                 ...state,
-                CartArr: !state.CheckArr.includes(action.payload._id) ? [...state.CartArr, action.payload] : [...state.CartArr],
-                TotalSum: !state.CheckArr.includes(action.payload._id) ? state.TotalSum + Number(action.payload.price) : state.TotalSum,
+                CartArr: !state.CheckArr.includes(action.payload.id) ? [...state.CartArr, action.payload] : [...state.CartArr],
+                TotalSum: !state.CheckArr.includes(action.payload.id) ? state.TotalSum + Number(action.payload.price) : state.TotalSum,
             }
         },
         CheckId: (state, action) => {
@@ -94,13 +99,13 @@ const BagPacks = createSlice({
         RemoveCart: (state, action) => {
             return {
                 ...state,
-                CartArr: state.CartArr.filter((item) => item._id !== action.payload._id),
-                CheckArr: state.CheckArr.filter((item) => item !== action.payload._id),
+                CartArr: state.CartArr.filter((item) => item.id !== action.payload.id),
+                CheckArr: state.CheckArr.filter((item) => item !== action.payload.id),
                 TotalSum: !state.CheckArr.includes(action.payload) ? state.TotalSum - Number(action.payload.price) : state.TotalSum,
             }
         }
-
-    }
+    },
+    extraReducers: extraReducers
 })
 
 export const { CartAdd, CheckId, RemoveCart } = BagPacks.actions;

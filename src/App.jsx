@@ -6,6 +6,8 @@ import LoginPage from './Components/LoginSign'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import FooterTwo from './Components/FooterTwo'
 import Cart from './Components/Cart'
+import SignUp from './Components/SignUp'
+import ScrollButton from './Components/SmallComponents/ScrollButton'
 
 
 const App = () => {
@@ -19,8 +21,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signIn" element={<><LoginPage /></>} />
           <Route path="/cart" element={<><Cart /></>} />
+          <Route path="/signup" element={<><SignUp /></>} />
         </Routes>
         <FooterTwo />
+        <ScrollButton />
       </Router>
     </>
   )

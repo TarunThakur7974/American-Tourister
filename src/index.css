@@ -29,6 +29,17 @@ nav li {
   cursor: pointer;
 }
 
+.icon {
+  font-size: 10px;
+  position: relative;
+  color: white;
+  top: -45px;
+  left: 8px;
+  padding: 2px 7px;
+  border-radius: 50px;
+  background-color: red;
+}
+
 .h5Top {
   text-align: center;
   background: linear-gradient(90deg, #d11e47, #ef7922);
@@ -339,7 +350,24 @@ nav li {
   color: white;
   font-size: 13px;
   font-weight: thin;
+}
 
+.signUp input {
+  color: rgb(102, 98, 98);
+  font-size: 13px;
+  padding:5px 5px 8px 25px;
+  width: 70%;
+  border-bottom: 2px solid gray;
+}
+
+.signUp input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .signUp input {
+    width:100% ;
+  }
 }
 
 /* hover div */
@@ -366,6 +394,6 @@ nav li {
   left: 0px;
 }
 
-.cartScroll::-webkit-scrollbar{
-  display:none;
+.cartScroll::-webkit-scrollbar {
+  display: none;
 }

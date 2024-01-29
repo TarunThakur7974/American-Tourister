@@ -13,7 +13,7 @@ import ImageContainer from './ImageContainer'
 import GradientThird from './GradientThird'
 import FooterOne from './FooterOne'
 import FooterTwo from './FooterTwo'
-import ScrollButton from './SmallComponents/ScrollButton'
+
 
 const Home = () => {
 
@@ -35,7 +35,6 @@ const Home = () => {
             <GradientThird />
             <FooterOne />
             <FooterTwo />
-            <ScrollButton />
         </>
     )
 }
